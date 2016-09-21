@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--dimens-->
+    <dimen name="titlebar_height">52dp</dimen>
+    <dimen name="titlebar_item_width">48dp</dimen>
+    <dimen name="titlebar_item_height">48dp</dimen>
+    <dimen name="titlebar_item_padding">5dp</dimen>
+    <dimen name="titlebar_title">22dp</dimen>
+    <dimen name="titlebar_right">20dp</dimen>
+
+    <!--colors-->
+    <color name="titlebar_title">#FFFFFFFF</color>
+    <color name="titlebar_text_normal">#FFFFFFFF</color>
+    <color name="titlebar_text_press">#FFFFFFFF</color>
+    <drawable name="titlebar_background">@android:color/white</drawable>
+    <drawable name="titlebar_item_background">#00000000</drawable>
+
+    <!--attrs-->
+    <declare-styleable name="TitleBar">
+        <attr name="titleName" format="string" localization="suggested" />
+        <attr name="titlebar_bg_color" format="color" />
+        <attr name="titleGravity" format="integer">
+            <flag name="center" value="17" />
+            <flag name="left" value="19"/>
+        </attr>
+    </declare-styleable>
+
+    <style name="TitleBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/titlebar_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@drawable/titlebar_background</item>
+    </style>
+    <!-- TITLE -->
+    <style name="TitleBarMiddleText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/titlebar_title</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/titlebar_text_normal</item>
+    </style>
+    <!-- RIGHT TEXT -->
+    <style name="TitleBarRightText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">@dimen/titlebar_right</item>
+        <item name="android:textColor">@color/titlebar_text_normal</item>
+    </style>
+
+    <style name="TitleBarRightImg">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:padding">@dimen/titlebar_item_padding</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/titlebar_item_background</item>
+    </style>
+
+</resources>
